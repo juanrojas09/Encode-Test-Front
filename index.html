@@ -92,7 +92,7 @@
 		
 	</div>
 	<br>
-	<button type="button" style="width: 200px;" id="btn-actualizar" onclick="Actualizar()" class="btn btn-info">Modificar</button>
+	<button type="button" style="width: 200px;" id="btn-modificar" onclick="Actualizar()" class="btn btn-info">Modificar</button>
 	<br>
 	<p style="width: 560px;border: 1px solid black;margin-top: 15px;">Para Modificar los datos, por favor ingrese tipo y numero de documento, busquese y luego modifique los datos, Gracias.</p>
 	<br> <br>
@@ -230,8 +230,8 @@
 			<label for="inputPassword6" class="col-form-label"> Fecha de Alta de Suscripcion </label>
 		</div>
 		<div class="col-auto">
-			<a type="date" id="date" class="form-control" aria-describedby="passwordHelpInline">
-		</div>
+			<a type="date" id="date" aria-describedby="passwordHelpInline">
+		
 		<div class="col-auto">
 			<span id="passwordHelpInline" class="form-text">
 
@@ -248,9 +248,10 @@
 
 	</div>
 	
-</form>
-	<br>
 	<button type="button" id="btn-registrar" onclick="Registrar()" class="btn btn-success">Registrar Suscripcion</button>
+	<br>
+	
+</form>
 	<!-- Notifications area -->
 <script>
 n =  new Date();
@@ -293,6 +294,9 @@ document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 		padding-left: 10px;
 		padding-right: 10px;
 		
+	}
+	body{
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1054%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(220%2c 224%2c 229%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c724.608C135.638%2c738.88%2c259.64%2c656.244%2c375.535%2c584.343C493.015%2c511.458%2c611.681%2c431.268%2c672.747%2c307.233C734.646%2c181.506%2c753.896%2c31.643%2c713.749%2c-102.622C675.75%2c-229.706%2c534.492%2c-289.107%2c461.35%2c-399.762C372.488%2c-534.2%2c394.785%2c-772.519%2c240.403%2c-818.738C86.323%2c-864.866%2c-36.454%2c-674.46%2c-173.157%2c-589.72C-271.933%2c-528.49%2c-358.455%2c-461.279%2c-450.565%2c-390.417C-568.999%2c-299.304%2c-771.239%2c-261.848%2c-791.738%2c-113.835C-812.27%2c34.417%2c-627.973%2c125.886%2c-538.709%2c246.02C-470.116%2c338.334%2c-413.942%2c433.937%2c-327.963%2c510.321C-228.318%2c598.845%2c-132.556%2c710.66%2c0%2c724.608' fill='%23a9b2bf'%3e%3c/path%3e%3cpath d='M1920 1751.0900000000001C2043.1970000000001 1732.194 2158.701 1679.505 2252.62 1597.567 2338.435 1522.7 2379.888 1415.19 2424.915 1310.587 2468.9719999999998 1208.238 2512.8360000000002 1106.301 2512.055 994.875 2511.196 872.314 2487.056 749.2860000000001 2420.26 646.523 2347.712 534.911 2243.608 446.82399999999996 2121.446 393.93899999999996 1989.006 336.605 1832.706 275.554 1701.335 335.29600000000005 1570.16 394.94899999999996 1554.308 573.22 1470.089 690.15 1395.731 793.389 1272.636 859.844 1235.813 981.629 1196.424 1111.901 1212.641 1253.721 1261.252 1380.84 1311.804 1513.035 1391.257 1641.414 1514.636 1710.759 1635.4560000000001 1778.6660000000002 1783.006 1772.1019999999999 1920 1751.0900000000001' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1054'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 	}
 
 </style>
