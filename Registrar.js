@@ -16,6 +16,10 @@ $(document).ready(function () {
         Actualizar();
     }
     );
+    $("#btn-suscribir").click(function () {
+        Suscribir();
+    }
+    );
    
 
    
@@ -112,10 +116,8 @@ async function BuscarSuscriptor() {
         const numeroDocumento = document.getElementById("numdoc").value;
         tipoDocumento="dni";
         const tiempoTranscurrido = Date.now();
-        const hoy = new Date(tiempoTranscurrido);
-        hoy.toLocaleDateString();
-        console.log(hoy);
-        const fechaAlta= hoy;
+       
+        const fechaAlta= "string";
         
         //que el fecha alta sea la fecha de hoy
        
@@ -165,11 +167,7 @@ async function Actualizar() {
     let tipoDocumento = document.getElementById("doc").value;
     const numeroDocumento = document.getElementById("numdoc").value;
     tipoDocumento="dni";
-        const tiempoTranscurrido = Date.now();
-        const hoy = new Date(tiempoTranscurrido);
-        hoy.toLocaleDateString();
-        console.log(hoy);
-        const fechaAlta= hoy;
+        const fechaAlta= "string";
         const fechaFin="2025-12-31";
         const motivoFin="null";
     //creo un objeto con los datos
@@ -190,4 +188,49 @@ async function Actualizar() {
         //muestro un mensaje de exito
         alert("Suscriptor actualizado con exito");
     }
+}
+
+//funcion asincronica que haga uopdate de los datos de los usuarios
+async function Suscribir() {
+    const doc = document.getElementById("doc").value;
+    const numdoc = document.getElementById("numdoc").value;
+   
+    let tipoDocumento = document.getElementById("doc").value;
+    const numeroDocumento = document.getElementById("numdoc").value;
+    tipoDocumento="dni";
+   
+    
+   
+    const fechaAlta= "s ";
+    
+    //que el fecha alta sea la fecha de hoy
+   
+    console.log(fechaAlta.toString());
+
+   
+    const fechaFin="2025-12-31";
+    const motivoFin="null";
+    //const tipoDocumento="dni";
+    //creo un objeto con los datos
+    const data = { numeroDocumento ,tipoDocumento,fechaAlta,fechaFin,motivoFin};
+    
+    //hago el post
+    const rawResponse = await fetch('https://localhost:5085/Suscriptor/suscriptor/Suscribir?tipoDocumento='+doc+'&numeroDocumento='+numdoc, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    //obtengo la respuesta del servidor
+    const content = await rawResponse.json();
+    //si la respuesta es true
+    if (content == true) {
+        //muestro un mensaje de exito
+        alert("Suscriptor registrado con exito");
+        
+        
+    }
+
 }
